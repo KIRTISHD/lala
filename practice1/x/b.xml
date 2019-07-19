@@ -1,0 +1,10 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<tutorialspoint>
+   
+   <course category = "JAVA">
+      <title lang = "en">Java</title>
+      <tutor>Gopal</tutor>
+      <duration></duration>
+      <price>$30</price>
+   </course>
+</tutorialspoint>
