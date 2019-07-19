@@ -23,3 +23,13 @@ while($row = $result->fetch_assoc()) {
 }
 var_export($ages);
 $stmt->close();
+//single
+$stmt = $mysqli->prepare("SELECT id, name, age FROM myTable WHERE name = ?");
+$stmt->bind_param("s", $_POST['name']);
+$stmt->execute();
+$stmt->store_result();
+if($stmt->num_rows === 0) exit('No rows');
+$stmt->bind_result($id, $name, $age);
+$stmt->fetch();
+echo $name; //Output: 'Ryan'
+$stmt->close();
